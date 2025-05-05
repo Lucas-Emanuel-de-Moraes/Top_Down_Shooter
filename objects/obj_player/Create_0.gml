@@ -3,7 +3,7 @@ velh = 0
 velv = 0
 vel_tiro = 10
 time_tiro = 0;
-ping_tiro = room_speed * 0.2
+ping_tiro = game_get_speed(gamespeed_fps) * 0.2
 
 movimentacao = function() {
 	var _up, _down, _left, _right
@@ -33,9 +33,18 @@ atirando = function() {
 	image_angle = _dir
 	
 	var _fire = mouse_check_button(mb_left)
-	if(_fire) {
-		var _tiro = instance_create_layer(x, y, "tiros", obj_tiro)
-		_tiro.speed = vel_tiro
-		_tiro.direction = _dir
+	
+	if(time_tiro <= 0) {
+		if(_fire) {
+			var _tiro = instance_create_layer(x, y, "tiros", obj_tiro)
+			_tiro.speed = vel_tiro
+			_tiro.direction = _dir
+			time_tiro = ping_tiro
+			sprite_index = spr_player_tiro
+		} else {
+			sprite_index = spr_player
+		}
+	} else {
+		time_tiro--;	
 	}
 }

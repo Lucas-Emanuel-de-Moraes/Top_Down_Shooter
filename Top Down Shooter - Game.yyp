@@ -35,9 +35,13 @@
   },
   "name":"Top Down Shooter - Game",
   "resources":[
+    {"id":{"name":"obj_inimigo_pequeno","path":"objects/obj_inimigo_pequeno/obj_inimigo_pequeno.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_tiro","path":"objects/obj_tiro/obj_tiro.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"spr_efeito_tiro","path":"sprites/spr_efeito_tiro/spr_efeito_tiro.yy",},},
+    {"id":{"name":"spr_inimigo_pequeno","path":"sprites/spr_inimigo_pequeno/spr_inimigo_pequeno.yy",},},
+    {"id":{"name":"spr_player_tiro","path":"sprites/spr_player_tiro/spr_player_tiro.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_tiro","path":"sprites/spr_tiro/spr_tiro.yy",},},
   ],
